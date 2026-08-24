@@ -13,6 +13,7 @@ services:
     volumes:
       - localstack-data:/var/lib/localstack
       - ./docker/localstack/init:/etc/localstack/init/ready.d:ro
+      - ./data/sample/s3:/opt/glue-etl-sample/s3:ro
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:4566/_localstack/health"]
       interval: 5s
@@ -36,7 +37,9 @@ services:
       S3_BUCKET: glue-etl-poc
       S3_INPUT_PREFIX: input/json
       S3_LOOKUP_PREFIX: input/lookup
+      S3_LOOKUP_KEY: input/lookup/customers.csv
       S3_OUTPUT_PREFIX: output/enriched
+      SPARK_S3_OUTPUT_PREFIX: output/enriched/spark
       DISABLE_SSL: "true"
       SPARK_CONF_DIR: /home/hadoop/workspace/docker/glue/conf
     working_dir: /home/hadoop/workspace
