@@ -116,7 +116,7 @@ async def list_json_keys(s3, executor: ThreadPoolExecutor, bucket: str, prefix: 
             item["Key"]
             for page in pages
             for item in page.get("Contents", [])
-            if item["Key"].endswith(".json")
+            if item["Key"].endswith(".json") and PurePosixPath(item["Key"]).stem.isdigit()
         ]
 
     loop = asyncio.get_running_loop()
