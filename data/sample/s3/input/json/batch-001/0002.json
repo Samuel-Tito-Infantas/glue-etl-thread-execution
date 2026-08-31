@@ -1,0 +1,14 @@
+{
+  "order_id": "ord-0002",
+  "customer_id": "cust-002",
+  "order_date": "2026-08-20",
+  "amount": 240.0,
+  "currency": "USD",
+  "items": [
+    {
+      "sku": "sku-monitor",
+      "quantity": 1,
+      "unit_price": 240.0
+    }
+  ]
+}

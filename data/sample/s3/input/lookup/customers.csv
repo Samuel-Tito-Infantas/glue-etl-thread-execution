@@ -1,0 +1,5 @@
+customer_id,customer_name,segment,country
+cust-001,Ada Lovelace,enterprise,US
+cust-002,Grace Hopper,public_sector,US
+cust-003,Katherine Johnson,enterprise,US
+cust-004,Dorothy Vaughan,small_business,US
