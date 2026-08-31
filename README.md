@@ -22,7 +22,30 @@ Local POC for replaying an AWS Glue-style ETL workflow with Docker, LocalStack S
 │           └── input/
 ├── tests/                        # pending validation task
 ├── docker-compose.yml
-└── .env.example
+└── .env
+```
+
+## Env Variables
+```bash
+# .env
+AWS_ACCESS_KEY_ID=test
+AWS_SECRET_ACCESS_KEY=test
+AWS_DEFAULT_REGION=us-east-1
+AWS_ENDPOINT_URL=http://localhost:4566
+AWS_ENDPOINT_URL_S3=http://localhost:4566
+
+LOCALSTACK_S3_ENDPOINT=http://localstack:4566
+S3_BUCKET=glue-etl-poc
+S3_INPUT_PREFIX=input/json
+S3_LOOKUP_PREFIX=input/lookup
+S3_LOOKUP_KEY=input/lookup/customers.csv
+S3_OUTPUT_PREFIX=output/enriched
+PYTHON_S3_OUTPUT_PREFIX=output/enriched/python
+SPARK_S3_OUTPUT_PREFIX=output/enriched/spark
+MAX_S3_CONCURRENCY=16
+
+AWS_GLUE_IMAGE=public.ecr.aws/glue/aws-glue-libs:5
+AWS_GLUE_VERSION=5.0
 ```
 
 ## Local Services
