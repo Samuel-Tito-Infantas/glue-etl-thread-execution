@@ -1,0 +1,14 @@
+{
+  "order_id": "ord-0003",
+  "customer_id": "cust-001",
+  "order_date": "2026-08-21",
+  "amount": 35.5,
+  "currency": "USD",
+  "items": [
+    {
+      "sku": "sku-cable",
+      "quantity": 5,
+      "unit_price": 7.1
+    }
+  ]
+}

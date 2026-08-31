@@ -1,0 +1,19 @@
+{
+  "order_id": "ord-0001",
+  "customer_id": "cust-001",
+  "order_date": "2026-08-20",
+  "amount": 129.9,
+  "currency": "USD",
+  "items": [
+    {
+      "sku": "sku-keyboard",
+      "quantity": 1,
+      "unit_price": 79.9
+    },
+    {
+      "sku": "sku-mouse",
+      "quantity": 1,
+      "unit_price": 50.0
+    }
+  ]
+}
